@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Busy Day</div>
+      <div class="inner-container">
+        <div class="header-part2">
+          <div class="greetings">Hello ,Gopi !</div>
+          <div class="time-temp">
+            <div class="time">Wed , July 16</div>
+            <div class="temp">☀ 24 C</div>
+          </div>
+        </div>
+        <div class="functionality">
+          <button class="add-btn" onclick="addNewList()">+ Add new List</button>
+          <div class="search">
+            <input type="text" id="searchInput" placeholder="Search" />
+            <button class="search-btn" onclick="performSearch()">Search</button>
+            <div class="sort-dropdown">
+              <select onchange="handleSortOption(this.value)">
+                <option value="">Sort By</option>
+                <option value="alpha-asc">Title A → Z</option>
+                <option value="alpha-desc">Title Z → A</option>
+                <option value="date-asc">Due Date ↑</option>
+                <option value="date-desc">Due Date ↓</option>
+                <option value="completed">Completed</option>
+                <option value="Incompleted">InCompleted</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="cardWrapper" class="card-container"></div>
+      </div>
+        <div class="footer">&copy; 2025 Busy Day By ScriptedSprouts</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

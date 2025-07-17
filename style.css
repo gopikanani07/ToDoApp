@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.container {
+  width: 100vw;
+  font-family: "Figtree", sans-serif;
+}
+.inner-container {
+  padding: 4vw 20vw;
+   min-height: 80vh; 
+}
+.header {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(
+    to right,
+    #fff6e7,
+    #e5ffe6,
+    #f3e4f7,
+    #edbbb4
+  );
+  font-size: 4vmin;
+  text-align: center;
+  padding: 2vh;
+}
+.header-part2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.time-temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6vw;
+  font-size: 2.1vh;
+}
+.greetings {
+  font-size: 4vh;
+  font-weight: 700;
+}
+.functionality
+{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+.search
+{
+  display: flex;
+  font-size: 3vh;
+  height: 5vh;
+  align-items: center;  
+}
+.search > i
+{
+  margin: 10px;
+}
+.search > input
+{
+  height: 4vh;
+  border-radius: 10px;
+  padding: 10px;
+  color: grey;
+  font-size: 2vh;
+  width: 10vw;
+}
+.search > .search-btn
+{
+    background-color: black;
+    color: white;
+    width: 8vw;
+    height: 4vh;
+    border: none;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+.sort-dropdown > select
+{
+    background-color: black;
+    color: white;
+    width: 8vw;
+    height: 4vh;
+    border: none;
+    font-size: 1.5vh;
+    border-radius: 10px;
+    padding: 10px;
+   
+}
+
+.add-btn {
+  background-color: black;
+  color: white;
+  padding: 1.1vh 1.9vh;
+  width: 20%;
+  min-width: 20vh;
+  border-radius: 10px;
+  border: none;
+  margin-top: 4vh;
+  font-size: 2.3vh;
+  text-align: start;
+}
+.add-btn:hover
+{
+  background-color: #525252;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 2vh;
+}
+.card {
+  padding: 2vh;
+  background-color: #FFF6E7;
+  width: 30%;
+  margin-top: 3vh;
+
+  border-radius: 12px;
+  border: 1px solid black;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-title>input:hover
+{
+  background-color: white;
+}
+.card-title input {
+  font-size: x-large;
+  font-weight: 700;
+}
+input {
+  background-color:   #FFF6E7;
+  border: none;
+  width: 100%;
+}
+input:focus {
+  border: none;
+  outline: none;
+
+}
+.duedate 
+{
+  display: flex;
+   margin-top: 1vh;
+  
+  font-size: larger;
+  width: 100%;
+}
+.duedate > input {
+
+  color: gray;
+  font-size: larger;
+  width: 65%;
+}
+.duedate > input:hover
+{
+  background-color: white;
+}
+.list {
+  margin-top: 2vh;
+}
+.list-item {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  display: flex;
+  align-items: start;
+}
+
+.custom-checkbox
+{
+  width: 20%;
+}
+
+.task-input
+{
+  width:80%;
+}
+
+.list-item > input {
+  font-size: large;
+  font-weight: 200; 
+}
+.delete-task {
+  display: none;
+  margin-left: 1vh;
+  
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.list-item:hover .delete-task {
+  display: inline;
+}
+
+.list-actions {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 10px;
+  margin-top: 10px;
+  vertical-align: middle;
+}
+.list-actions i {
+  cursor: pointer;
+  color: gray;
+}
+
+
+/* responsive */
+@media (min-width: 600px) and (max-width: 1000px) {
+  .inner-container {
+    padding: 4vw 0.5vw;
+  }
+  .functionality   
+  {
+    margin: 0 0 0 0px ;
+    justify-content:center;
+    gap: 40vw;
+  }
+  .header-part2
+  {
+    margin: 0 0 0 0px ;
+    justify-content:center;
+    gap: 40vw;  
+  }
+
+}
+ 
+
+@media (max-width: 600px) {
+  .header-part2 {
+    flex-direction: column;
+    gap: 3vh;
+    justify-content: start;
+    align-items: start;
+  }
+  .inner-container {
+    padding: 5vh 2vh;
+  }
+  .time-temp {
+    gap: 2vh;
+  }
+  .card {
+  padding: 2vh;
+  background-color: #FFF6E7;
+  width: 90%;
+  margin-top: 3vh;
+
+  border-radius: 12px;
+  border: 1px solid black;
+}
+.functionality
+{
+  flex-direction: column;
+  gap: 20px;
+}
+.search-btn , .sort-dropdown > select ,.search> input
+{
+ 
+  min-width: 12vh ;
+}
+.duedate > input
+{
+  width: 40%;
+}
+}
+
+.footer
+{
+  text-align: center;
+  background-color: lightgray;
+  padding: 40px;
+  font-size: large;
+}
+
+
+
+
+@media (max-width :1360) {
+  .duedate
+  {
+    flex-direction: column;
+  }
+}

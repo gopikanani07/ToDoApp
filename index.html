@@ -22,7 +22,8 @@
         <div class="header-part2">
           <div class="greetings">Hello ,Gopi !</div>
           <div class="time-temp">
-            <div class="time">Wed , July 16</div>
+            <div id="current-time" class="time"></div>
+
             <div class="temp">☀ 24 C</div>
           </div>
         </div>
@@ -49,6 +50,15 @@
       </div>
         <div class="footer">&copy; 2025 Busy Day By ScriptedSprouts</div>
     </div>
+    <script>
+  const dateElement = document.getElementById("current-time");
+
+  const options = { weekday: 'short', month: 'long', day: 'numeric' };
+  const today = new Date().toLocaleDateString('en-US', options);
+
+  dateElement.textContent = today;
+</script>
+
     <script src="script.js"></script>
   </body>
 </html>
